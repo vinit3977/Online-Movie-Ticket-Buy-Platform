@@ -1,0 +1,401 @@
+* {   /*to make changes in all the elements in page use"*"*/
+    box-sizing: border-box;
+}
+/* Add a transition effect to the header */
+header {
+    transition: transform 0.3s ease-in-out;
+  
+
+  }
+  
+  /* Define the hidden class */
+  .hidden {
+    transform: translateY(-100%);
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background: linear-gradient(to right, #11151ebd, #ff4500);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-family: inherit;
+    color:#666;
+    padding: 20px 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5PX;
+    background-size: cover;
+  }
+
+.nav {
+    display: flex;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav ul li a:hover {
+    background-color: #fff;
+    color: #581b05;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #fff;
+    color: #ff4500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+
+.Move {
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center; /*the property is for cross axis(top- bottom)*/
+    justify-content:space-evenly; /*the property is for main axis(left-right)*/
+    height: 70vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+        display: flex;
+        width: 80vw;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .panel {
+        border-width: 4px;
+        border-style: outset;
+        border-color: beige;
+        background-size: cover;/* Scale the entire image to cover the panel */
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60vh; /* Adjust as needed */
+        border-radius:25px;
+        color: white;
+        cursor: pointer;
+        flex: 1; /* Flex-grow in value of 4 to fill available space */
+        margin: 10px;
+        position: relative;
+        transition: flex 0.7s ease-in;
+    }
+    
+    .panel h3 {
+        font-size: 17px;
+        position: absolute;
+        bottom: 10px;
+        left: 5px;
+        margin: 0;
+        opacity: 0;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.648);
+        border-radius: 5px;
+        
+    }
+
+    .panel.active {
+        flex: 2; /*makes items expand */
+    }
+    
+    .panel.active h3 {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.2s;
+    }
+    
+    .hero {
+        background-image: url('/123/home/posters/negativvvv.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 600px;
+        animation: fadeIn 2s;
+    }
+    
+    .hero h1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 60px;
+        margin: bottom 5px;;
+        color:rgb(255, 255, 255);
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-bottom: 25px;
+        color: rgb(255, 255, 255);
+    }
+
+    .btn {
+        background-color: #ff4500;
+        color: #fff;
+        padding: 7px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+    background-color: #ff7b4b;
+}
+    
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.feature {
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+    opacity: 0; /* Initial state for the animation */
+    transform: translateY(100px); /* Initial state for the animation */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+.feature.animate {
+    opacity: 1; /* Final state for the animation */
+    transform: translateY(0); /* Final state for the animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.feature img {
+    width: 100%;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes logoFadeIn {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .search-bar {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle.active + .nav {
+        display: flex;
+    }
+}
+
+.noty {
+  font-family: inherit;
+  color:#666;
+  padding: 15px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5PX;
+  background-size: cover;
+  font-size: 24px;
+  animation: logoFadeIn 2s;
+}
+
+.noty:focus {
+  outline: none;
+}
+
+.noty:active {
+  transform: scale(0.98);
+}
+
+#toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+}
+
+.toast.info {
+  color: rebeccapurple;
+}
+
+.toast.success {
+  color: green;
+}
+
+.toast.error {
+  color: red;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    transition: right 0.3s ease; /* Animation for smooth sliding */
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger menu position */
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Sidebar visible class */
+.sidebar-visible {
+    right: 0;
+}
+
+
+
+
+
+

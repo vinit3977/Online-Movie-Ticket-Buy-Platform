@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmFlix</title>
+    <link rel="icon" href="/123/home/posters/logo filmflix.png" type="image/icon type">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+
+</head>
+<body>
+    <div 
+    <button class="hamburger hamburger--spin" type="button">
+   <span class="hamburger-box">
+       <span class="hamburger-inner"></span>
+   </span>
+</button> </div>
+    <header class="header">
+        <small class="logo" id="button" style="background-image: url(posters/logo\ filmflix.png); "></small>
+       
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/123/Movie catalog/Mc.html">Cinecatalog</a></li>
+                <li><a href="#">NotifyHUB</a></li>
+                <li><a href="#">Feedback&Rating</a></li>
+                <li><a href="#">SupportDesk</a></li>
+            </ul>
+        
+        </nav>
+       
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search Movies...">
+        <button type="button" onclick="searchMovies()">Search</button>
+    </div>
+
+    <script>
+        function searchMovies() {
+            var query = document.getElementById('searchInput').value.trim();
+            if (query) {
+                // You can customize the URL and page name based on your requirements
+                var url = query + ".html"; // Assuming you have a separate HTML file for each movie or result
+                window.location.href = url;
+            } else {
+                alert("Please enter a movie name to search.");
+            }
+        }
+    </script>
+
+    
+    <!-- Sidebar Structure -->
+<div class="sidebar">
+    <ul>
+        <li><a href="#">Username</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Log in/out</a></li>
+        <li><a href="#">Help and Support</a></li>
+    </ul>
+</div>
+
+        <div id="toasts"></div>
+
+            <button class="noty" id="button" style="background-image: url(posters/bell.jpeg);"></button>
+           
+          
+    </header>
+   
+
+       <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to FilmFlix</h1>
+            <p>Book tickets for the latest Movies!</p>
+            <a href="/123/Movie catalog/Mc.html" class="btn">Book Now</a>
+        </div>
+        
+    </section>
+   
+  <section class="Move">
+    
+    <div class="container"> 
+
+
+        <div
+        <a href="/M info pg/kalki info.html" class="panel  active" style="background-image:url(posters/download\ \(20\).jpeg)" >
+        <h3>⭐7.7/10</h3>
+        </a>
+        </div>
+    
+        <div class="panel" style="background-image: url(posters/download\ \(21\).jpeg)" data-link="https://in.bookmyshow.com/vadodara/movies/deadpool-wolverine/ET00341295">
+            <h3>⭐8.3/10</h3>
+
+            </div>
+
+                <div class="panel" style="background-image: url(posters/\'Fly\ Me\ to\ the\ Moon\'\ Soars\ as\ a\ Light\ Vintage\ Romance.jpeg)" data-link="https://in.bookmyshow.com/vadodara/movies/fly-me-to-the-moon/ET00395059">
+                    <h3>⭐6.8/10</h3>
+   
+                    </div>
+               
+                    <div class="panel" style="background-image: url(posters/WhatsApp\ Image\ 2024-08-08\ at\ 11.26.50\ AM.jpeg)" data-link="https://in.bookmyshow.com/vadodara/movies/twisters/ET00387070">
+                        <h3>⭐7.1/10</h3>
+
+                            </div>
+
+                            <div class="panel" style="background-image: url(posters/bad.jpeg)" data-link="https://in.bookmyshow.com/vadodara/movies/bad-newz/ET00391805">
+                                <h3>⭐6.3/10</h3>
+                          
+                                </div>
+                
+                                <div class="panel" style="background-image: url(posters/Jhamkudi.jpg)" data-link="https://in.bookmyshow.com/vadodara/movies/jhamkudi/ET00395950">
+                                    <h3>⭐7.7/10</h3>
+                                 
+                                    </div>
+                                
+
+                                    <div class="panel" style="background-image: url(posters/mother\'s.jpeg)" data-link="https://in.bookmyshow.com/vadodara/movies/mothers-instinct/ET00397454">
+                                        <h3>⭐6.3/10</h3>
+                                    
+                                        </div>
+                                        
+                            </div>
+ </section>
+
+ 
+    <section class="features">
+        <div class="feature">
+            <img src="posters/Ticket.jpeg" alt="Feature 1">
+            <h2>Easy Booking</h2>
+            <p>Book your tickets with ease and convenience.</p>
+        </div>
+        <div class="feature">
+            <img src="posters/cal.jpeg" alt="Feature 2">
+            <h2>Exclusive Events</h2>
+            <p>Get access to exclusive events and screenings.</p>
+        </div>
+        <div class="feature">
+            <img src="posters/dis.jpeg" alt="Feature 3">
+            <h2>Great Discounts</h2>
+            <p>Enjoy great discounts and offers on your bookings.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 FilmFlick. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/012dba5f-bee6-4992-9a11-72ae21b27c2e/webchat/v2.1/config.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
